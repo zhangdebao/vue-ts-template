@@ -1,0 +1,1 @@
+import { setLocalStore, getLocalStore, removeLocalStore, clearLocalStore } from '../../../src/utils/localStore'

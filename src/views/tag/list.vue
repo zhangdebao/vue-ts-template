@@ -13,7 +13,7 @@
     <el-table :data="showDatas" :max-height="maxHeight">
       <el-table-column prop="id" label="ID">
       </el-table-column>
-      <el-table-column prop="name" label="名称" >
+      <el-table-column prop="name" label="字符串" >
       </el-table-column>
       <el-table-column prop="is_show" label="显示" >
         <template slot-scope="{ row }">
