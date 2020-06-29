@@ -1,18 +1,18 @@
 import { setLocalStore, getLocalStore, removeLocalStore, clearLocalStore } from '../../../src/utils/localStore'
-describe('localStore', () => { 
+describe('localStore', () => {
   const TOKEN = 'token'
-  test('getLocalStore', () => { 
+  test('getLocalStore', () => {
     expect(getLocalStore(TOKEN)).toBeNull()
   })
-  test('setLocalStore', () => { 
+  test('setLocalStore', () => {
     setLocalStore(TOKEN, '1234')
     expect(getLocalStore(TOKEN)).toBe('1234')
   })
-  test('setLocalStore', () => { 
+  test('setLocalStore', () => {
     removeLocalStore(TOKEN)
     expect(getLocalStore(TOKEN)).toBeNull()
   })
-  test('setLocalStore', () => { 
+  test('setLocalStore', () => {
     setLocalStore(TOKEN, '1234')
     clearLocalStore()
     expect(getLocalStore(TOKEN)).toBeNull()
