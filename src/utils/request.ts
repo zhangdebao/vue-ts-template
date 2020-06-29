@@ -20,7 +20,6 @@ service.interceptors.request.use(config => {
 })
 
 service.interceptors.response.use(response => {
-  console.log('response', response)
   const { data, status } = response
 
   // if the custom code is not 20000, it is judged as an error.
@@ -31,8 +30,8 @@ service.interceptors.response.use(response => {
       duration: 5 * 1000
     })
 
-    // 50008: Illegal token; 50012: Other clients logged in; 50014: Token expired;
-    if (data.code === 50008 || data.data === 50012 || data.data === 50014) {
+    // 301: Illegal token; 302: Other clients logged in; 303: Token expired;
+    if (data.code === 301 || data.data === 302 || data.data === 303) {
       // to re-login
       MessageBox.confirm('您已注销，您可以取消停留在此页，或重新登录，确认注销', {
         confirmButtonText: '登录',

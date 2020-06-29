@@ -1,6 +1,6 @@
 import { getToken, setToken, removeToken } from '../../../src/utils/auth'
 describe('js-cookie 相关测试', () => {
-  test('getToken', () => { 
+  test('getToken', () => {
     expect(getToken()).toBe('')
   })
   test('setToken', () => {
